@@ -4,6 +4,8 @@ import 'package:liquid_swipe/Helpers/Helpers.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:flutter/gestures.dart';
 
 
 void main()
@@ -94,23 +96,33 @@ final page=[
                 ),
               )
           ),
-          SignInButton(
+          SizedBox(
+            height: 20.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            SignInButton(
             Buttons.GitHub,
             mini: true,
             onPressed: () {
               _launchURL('Github');
             },
           ),
+          SizedBox(
+            width: 10.0,
+          ),
           SignInButton(
             Buttons.LinkedIn,
             mini: true,
             onPressed: () {
-              _launchURL('linkedIn');
+              _launchURL('linkedin');
             },
           ),
-        ],
+        ],),
+              ],
 
-      )
+            )
   ),
   Container(
     margin: EdgeInsets.symmetric(vertical: 90.0,horizontal: 15.0,),
@@ -566,7 +578,7 @@ final page=[
   ],),
   ),
   Container(
-      margin: EdgeInsets.symmetric(vertical: 50.0,horizontal: 15.0,),
+      margin: EdgeInsets.symmetric(vertical: 70.0,horizontal: 15.0,),
   child: Column(
       children: <Widget>[
         Text('ACHIEVEMENTS',
@@ -653,18 +665,8 @@ final page=[
             fontWeight: FontWeight.w300,
             fontFamily: 'Open Sans Pro',
           ), ),
-        SizedBox(
-          height: 30.0,
-        ),
-        Text('PUBLICATIONS',
-          style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Open Sans Pro',
-            letterSpacing: 1.5,
-          ),),
-  ],),),
+
+      ],),),
  ];
 class Home extends StatelessWidget {
   @override
@@ -690,7 +692,6 @@ class Home extends StatelessWidget {
 _launchURL(String value) async {
   const url = 'https://github.com/ishitakapoor26';
   const url2 = 'https://www.linkedin.com/in/ishita-kapoor-789141184/';
-  // const url4 = 'https://www.atrishabh1999@gmail.com';
   if (value == 'Github') {
     if (await canLaunch(url)) {
       await launch(url);
