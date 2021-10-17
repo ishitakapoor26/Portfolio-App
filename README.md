@@ -1,6 +1,24 @@
-# porfolio_app
+# Portfolio_app
 
-Portfolio App
+Portfolio App, basically is an application resume. It includes:
+<ul>
+  <li>Education Background</li>
+  <li>Skills</li>
+  <li>Work Experience</li>
+  <li>Projects</li>
+  <li>Open Source Experience</li>
+  <li>Achievements</li>
+  </ul>
+  
+  Below are some of the App Screens.....
+  <div style="width:100px; height:100px;">
+  
+  ![WhatsApp Image 2021-10-17 at 13 00 10](https://user-images.githubusercontent.com/78542333/137616907-2ec5a823-e0e8-4767-b173-0ebf7962d696.jpeg)
+  
+  ![WhatsApp Image 2021-10-17 at 13 03 21](https://user-images.githubusercontent.com/78542333/137617450-c86639e0-ca48-4b7c-aef9-e577c80e123b.jpeg)
+
+
+</div>
 
 ## Getting Started
 
